@@ -25,6 +25,12 @@
                     <th>[$Totaal]</th>
                 </tr>
             </table>
+            <form>
+                <label for="address">Afleveradres:</label>
+                <input type="text" id="address" name="address" required><br><br>
+                <!-- Optie voor ophalen ??-->
+                <button type="submit">Bestelling Plaatsen</button>
+            </form>
             <!--<h6>Winkelmand: </h6>
             <h6>Anuleer artikel: </h6>
             <h6>Anuleer bestelling: </h6>
