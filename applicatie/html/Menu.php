@@ -16,7 +16,7 @@ session_start();
 
 </head>
 <body>
-    <?php include 'Header.php'; ?>
+    <?php include 'functies/Header.php'; ?>
     <main></main>
         <div class= "container">
             <h2> Menu </h2>
@@ -28,10 +28,6 @@ session_start();
 
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <p> link naar privacy verklaring.</p>
-        </div>
-    </footer>
+    <?php include 'functies/Footer.php'; ?>
 </body>
 </html>

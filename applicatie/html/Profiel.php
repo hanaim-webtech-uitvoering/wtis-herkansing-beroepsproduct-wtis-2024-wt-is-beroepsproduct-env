@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <?php include 'Header.php'; ?>
+    <?php include 'functies/Header.php'; ?>
     <h6> Eerdere bestellingen: datum, status </h6>
     <h6> Huidige bestelling: Bevestigd, datum, status</h6>
-</body>
+</body> 
 </html>

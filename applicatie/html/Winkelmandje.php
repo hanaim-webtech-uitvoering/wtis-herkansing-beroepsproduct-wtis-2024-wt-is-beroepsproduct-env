@@ -12,11 +12,12 @@
 </head>
 
 <body>
-    <?php include 'Header.php'; ?>
+    <?php include 'functies/Header.php'; ?>
     <h6>Winkelmand: </h6>
     <h6>Anuleer artikel: </h6>
     <h6>Anuleer bestelling: </h6>
     <h6> Bestelling ophalen/wordt bezorgt naar adres..</h6>
     <h6>Bevestig bestelling: Betalen</h6>
+    <?php include 'functies/Footer.php'; ?>
 </body>
 </html>

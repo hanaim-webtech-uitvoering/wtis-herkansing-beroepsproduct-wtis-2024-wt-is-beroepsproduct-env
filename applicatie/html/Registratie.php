@@ -16,18 +16,18 @@ PERSONEEL: Om bestellingen van klant te beheren, volgende ->detailpagina.
 </head>
 
 <body>
-    <?php include 'Header.php'; ?>
-    <form method="post" action="Registratie_Login.html">
-        <label>username</label> 
-        <input type="text" id="username" name="username">
-
-        <label>password</label>
-        <input type="password" id="'wachtwoord" name="wachtwoord">
-        
-        <label>first_name</label>
-        <label>last_name</label>
-        <label>role</label>
-        <label>address</label>
-    </form>
+    <?php include 'functies/Header.php'; ?>
+    <main>
+        <form method="post" action="">
+        <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="wachtwoord">Wachtwoord:</label>
+                <input type="password" id="wachtwoord" name="wachtwoord" required><br><br>
+                <button type="submit">Registreer</button>
+        </form>
+    </main>
+    <?php include 'functies/Footer.php'; ?>
 </body>
 </html>
