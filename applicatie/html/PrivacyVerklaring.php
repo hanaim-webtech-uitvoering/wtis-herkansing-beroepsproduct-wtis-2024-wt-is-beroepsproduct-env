@@ -14,5 +14,6 @@
 <body>
     <?php include 'functies/Header.php'; ?>
     <h6>PrivacyVerklaring</h6>
+    <?php include 'functies/Footer.php'; ?>
 </body>
 </html>

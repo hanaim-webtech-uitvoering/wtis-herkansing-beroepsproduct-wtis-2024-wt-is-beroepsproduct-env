@@ -15,5 +15,6 @@
     <?php include 'functies/Header.php'; ?>
     <h6> Eerdere bestellingen: datum, status </h6>
     <h6> Huidige bestelling: Bevestigd, datum, status</h6>
+    <?php include 'functies/Footer.php'; ?>
 </body> 
 </html>

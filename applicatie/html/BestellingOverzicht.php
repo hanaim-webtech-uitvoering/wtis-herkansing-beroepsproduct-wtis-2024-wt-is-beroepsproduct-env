@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <?php include 'Header.php'; ?>
+    <?php include 'functies/Header.php'; ?>
     <h6>Actieve bestellingen: </h6>
     <h6>Bestellingen klaar voor bezorgen/ophalen:</h6>
+    <?php include 'functies/Footer.php'; ?>
 </body>
 </html>
