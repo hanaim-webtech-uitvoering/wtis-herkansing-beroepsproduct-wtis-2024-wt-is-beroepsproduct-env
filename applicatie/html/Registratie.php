@@ -16,18 +16,36 @@ PERSONEEL: Om bestellingen van klant te beheren, volgende ->detailpagina.
 </head>
 
 <body>
-    <?php include 'functies/Header.php'; ?>
+    <header>
+        <div class="container">
+            <h1>Pizzeria Sole Machina</h1>
+            <nav>
+                <ul>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="Profiel.html">Profiel</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="Registratie.html">Registratie</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
     <main>
-        <form method="post" action="">
-        <label for="naam">Naam:</label>
-                <input type="text" id="naam" name="naam" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="wachtwoord">Wachtwoord:</label>
-                <input type="password" id="wachtwoord" name="wachtwoord" required><br><br>
-                <button type="submit">Registreer</button>
+    <div class="registratie-form">
+        <form method="post" action="Profiel.html">
+        <input name="name" type="text" placeholder="voornaam" required/>
+        <input name="name" type="text" placeholder="achternaam" required/>
+        <input name="email" type="email" placeholder="gebruiksnaam" required />
+        <input name="password" type="password" placeholder="wachtwoord" required/>
+        <input name="password" type="password" placeholder="wachtwoord bevestiging" required/>
+        <input name="rol" type="text" placeholder="rol (klant/medewerker)" required/>
+        <input name="adres" type="text" placeholder="adres"/>
+        <a href="Profiel.html">register</a>
         </form>
+        </div>
     </main>
-    <?php include 'functies/Footer.php'; ?>
+    <footer>
+            <a href="Privacyverklaring.html"> link naar privacy verklaring.</a>
+    </footer>
 </body>
 </html>

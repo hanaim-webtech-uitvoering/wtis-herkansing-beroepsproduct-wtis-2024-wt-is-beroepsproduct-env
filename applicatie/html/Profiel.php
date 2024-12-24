@@ -12,9 +12,82 @@
 </head>
 
 <body>
-    <?php include 'functies/Header.php'; ?>
-    <h6> Eerdere bestellingen: datum, status </h6>
-    <h6> Huidige bestelling: Bevestigd, datum, status</h6>
-    <?php include 'functies/Footer.php'; ?>
-</body> 
+    <header>
+        <div class="container">
+            <h1>Pizzeria Sole Machina</h1>
+            <nav>
+                <ul>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Winkelmandje.html">Winkelmandje</a></li>
+                    <li><a href="Profiel.html">Profiel</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="Registratie.html">Registratie</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <main>
+    <h2> Eerdere bestellingen:</h2>
+    <table>
+        <tr>
+            <th>Datum: </th>
+            <th>Bestellingnr: </th>
+            <th>Prijs:</th>
+            <th>Status: </th>
+        </tr>
+        <tr>
+            <td> 11/11/2024 </td>
+            <td> 00001</td>
+            <td> 10,99€</td>
+            <td>In Oven</td>
+        </tr>
+        <tr>
+            <td> 01/11/2024 </td>
+            <td> 00004</td>
+            <td> 1,49€</td>
+            <td>Geannuleerd</td>
+        </tr>
+        <tr>
+            <td> 21/10/2024 </td>
+            <td> 00010</td>
+            <td> 12,48€</td>
+            <td>Bezorgd</td>
+        </tr>
+        </table>
+    <h2> Huidige bestelling:</h2>
+    <table>
+        <tr>
+            <th>Datum: </th>
+            <th>Bestellingnr: </th>
+            <th>Producten: </th>
+            <th>Aantal: </th>
+            <th>Prijs:</th>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> 00001</td>
+            <td> Margaritha pizza</td>
+            <td> 1 </td>
+            <td> 10,99€</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> Cola</td>
+            <td> 2 </td>
+            <td> 1,49€</td>
+        </tr>
+        <tr>
+            <td> 11/11/2024 </td>
+            <td> Totaal</td>
+            <td> </td>
+            <td> 3 </td>
+            <td> 12,48€</td>
+        </tr>
+        </table>
+    </main>
+    <footer>
+            <a href="Privacyverklaring.html"> link naar privacy verklaring.</a>
+    </footer>
+</body>
 </html>

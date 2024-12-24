@@ -1,43 +1,456 @@
+/*
+- voor registreren en login -> label
+*/
+/***********************************************************/
+/*                 ALGEMEEN                                */
+/***********************************************************/
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffeff4;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #1F5B1F;
+    justify-content: center;
+    align-items: center;
+
 }
+
 header {
-    background-color: #888bb4;
-    color: #3b1c1c;
+    background-color: #6d1414;
+    color: #fff;
     padding: 10px 0;
     text-align: center;
 }
+
+header h1 {
+    margin: 0;
+}
+
+main>a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 3%;
+    background-color: #6d1414;
+    border: solid 10px #6d1414;
+    border-radius:3px;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #6d1414;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0;
+    margin-top: 15%;
+}
+
+footer>a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    text-align: left;
+    color:#ffffff;
+}
+
+p{
+    font-style: italic;
+}
+/***********************************************************/
+/*                   MEDIA                                 */
+/***********************************************************/
+/*Voor telefonen of andere kleine schermen*/
+@media(max-width: 600px){
+    body {
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 5px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-top: 5px;
+    }
+
+    h2 {
+        margin-left: 15px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .menu-item, table {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .registratie-form, .login-form, .login-form-medewerker {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .bezorg-adres {
+        width: 100%;
+    }
+}
+
+/*Voor computers of andere grote schermen*/
+@media(min-width: 601px){
+    body {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 30px;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .menu-item, table {
+        width: 80%;
+        margin: 15px 30px;
+    }
+
+    .registratie-form, .login-form, .login-form-medewerker {
+        width: 80%;
+        margin: 25px auto;
+    }
+
+    .bezorg-adres {
+        width: 80%;
+    }
+}
+
+
+
+/***********************************************************/
+/*                 MENU                                    */
+/***********************************************************/
+
+.menu-container{
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	align-items: center;
+	margin-top: 4rem;
 }
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
+
 .menu-item, table {
     background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
-    margin: 10px 0;
+    font-size: 15px;
+    width: 80%;
+	height: auto;
+	border-radius: 15px;
+	line-height: 30px;
+	margin: 5px 30px 15px 30px;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
 }
 
-footer {
-    background-color: #888bb4;
-    color: #000000;
+button {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #6d1414;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #CB202D;
+}
+
+.menu-item>img{
+    position: relative;
+    width: 80%;
+    border-radius: 15px 15px 5px 15px;
+}
+.menu-item>button{
+    background-color: #6d1414;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+    }
+.menu-item>button>a{
+    text-decoration: none;
+    color:#ffffff
+}
+
+
+/***********************************************************/
+/*            REGISTRATIE                                  */
+/***********************************************************/
+.registratie-form{
+    width: 60%;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    margin:25px 20% 5px 20%;
+    background: #FFF8DC;
+    border:solid 0.1px #e6e6e6;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.registratie-form>form{
+    width: 70%;
+    align-content: center;
+    margin-left: 18%;
+}
+
+.registratie-form>form input{
+    padding:10px 0;
+    width:75%;
+    margin:10px 0;
+    border:solid 1px #000000;
+    border-radius:4px;
+    text-align: center;
+    background:#ffffff;
+}
+
+.registratie-form>form textarea{
+    width:89%;
+    margin:5px 0;
+    border:solid 1px #000000;
+    border-radius:4px;
+    text-align: center;
+    line-height:auto ;
+    height:100px;
+    background:#ffffff;
+    
+}
+.registratie-form>form button{
+    background: #6d1414;
+    color:#ffffff;
+    width:60%;
+    padding:10px 0;
+    border:solid 1px #000000;
+    margin:5px 0px;
+    text-align: center;
+    font-weight:bold;
+    border-radius:4px;
+    text-transform:uppercase ;
+}
+
+/***********************************************************/
+/*            PROFIEL                                      */
+/***********************************************************/
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    align-items: right;
+    border:solid 1px #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2%;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border:solid 1px #c4c4c4;
+}
+
+table th {
+    background-color: #FFF8DC;
+}
+table th>button {
+    background-color: #9c9c9c;
+    color:#ffffff
+}
+
+
+button.bestelling-bevestiging{
+    align-items: left;
+    text-align: left;
+}
+
+button.bestelling-bevestiging{
+    background-color: rgb(126, 250, 126);
+    color:#000000;
+    margin-left: 30px;
+}
+
+button.bestelling-bevestiging:hover {
+    background-color: rgb(192, 238, 192);
+    color:#000000;
+}
+
+.bestelling-annuleren{
+    align-items: left;
+    text-align: left;
+    margin-left: 30px;
+}
+.bestelling-annuleren>button>a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/***********************************************************/
+/*                   BEZORG ADRES FORM                     */
+/***********************************************************/
+.bezorg-adres{
+    width: 50%;
+    margin:10px 6px 5px 6px;
+    background: #FFF8DC;
+    border:solid 0.1px #e6e6e6;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    padding-left: 30px;
+    margin-left: 30px;
+}
+
+.bezorg-adres>form{
     width: 100%;
-    bottom: 0;
+    background:#FFF8DC;
+}
+
+.bezorg-adres>form input{
+    padding:10px 0;
+    width:85%;
+    margin:5px 0;
+    border:solid 1px #206334;
+    border-radius:4px;
+    text-align: center;
+    background:#ffffff;
+}
+
+.bezorg-adres>form textarea{
+    width:89%;
+    margin:5px 0;
+    border:solid 1px #000000;
+    border-radius:4px;
+    text-align: center;
+    line-height:auto ;
+    height:100px;
+    background:#ffffff;
+    
+}
+
+/***********************************************************/
+/*                          LOGIN                          */
+/***********************************************************/
+.login-form{
+    width: 60%;
+    text-align: center;
+    margin:25px 20% 50px 20%;
+    background: #FFF8DC;
+    border:solid 0.1px #e6e6e6;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form>form{
+    width: 80%;
+}
+
+.login-form>form input{
+    padding:10px 0;
+    width:75%;
+    margin:10px 20% 5% 25% ;
+    border:solid 1px #000000;
+    border-radius:4px;
+    text-align: center;
+    background:#ffffff; 
+}
+
+.login-form>form textarea{
+    width:89%;
+    margin:5px 0;
+    border:solid 1px #000000;
+    border-radius:4px;
+    text-align: center;
+    line-height:auto ;
+    height:100px;
+    background:#ffffff;
+    
+}
+.login-form>form button{
+    background: #6d1414;
+    color:#ffffff;
+    width:60%;
+    padding:10px;
+    border:solid 1px #000000;
+    margin:5px 20% 5% 30%;
+    text-align: center;
+    font-weight:bold;
+    border-radius:4px;
+    text-transform:uppercase ;
+}
+.login-form>form label{
+    text-align: center;
+    margin-left: 20%;
+}
+.login-form>form h3{
+    text-align: center;
+    margin-left: 20%;
+}
+/***********************************************************/
+/*            LINK TERUG    KNOP                           */
+/***********************************************************/
+
+.link-terug-pagina>a{
+    margin-left: 5%;
+}
+
+/***********************************************************/
+/*            PRIVACY VERKLARING                           */
+/***********************************************************/
+.privacy-policy>p, ul, li{
+    margin-left: 5%;
+    color: #FFF8DC;
+}
+
+.privacy-policy>h1, h3{
+    margin-left: 3%;
+    color: #000000;
 }
